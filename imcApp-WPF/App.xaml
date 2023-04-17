@@ -4,11 +4,8 @@
              xmlns:local="clr-namespace:imcApp_WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-            <Style TargetType="TextBlock">
-                <Setter Property="FontFamily" Value="/imcApp-WPF;component/imcApp-WPF/assets/Poppins-Bold.ttf#Poppins" />
-            </Style>
-            <Style TargetType="TextBlock">
-                <Setter Property="FontFamily" Value="/imcApp-WPF;component/imcApp-WPF/assets/Poppins-Bold.ttf#Poppins" />
-            </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="/imcApp-WPF;component/imcApp-WPF/assets/Poppins-Bold.ttf#Poppins" />
+        </Style>
     </Application.Resources>
 </Application>

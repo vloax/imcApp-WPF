@@ -10,6 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="46"/>
+            <RowDefinition Height="110"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -17,14 +18,55 @@
         <Border Grid.Row="0" Background="#BE0F0F" />
         <TextBlock Grid.Row="0" FontFamily="Poppins" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="White" Text="Camila Ortolane e Vitor Melo" />
 
-
-
         <Border Grid.Row="1" Background="#573939"/>
-         <TextBlock Grid.Row="1" FontFamily="Poppins" Text="Calculadora de IMC" HorizontalAlignment="Center" VerticalAlignment="Center"  FontWeight="Bold" FontSize="32" Foreground="White" />
+        <TextBlock Grid.Row="1" FontFamily="Poppins" Text="Calculadora de IMC" HorizontalAlignment="Center" VerticalAlignment="Center"  FontWeight="Bold" FontSize="32" Foreground="White" />
 
-            <StackPanel Grid.Row="2">
-            
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30px" >
+            <TextBlock FontFamily="Poppins" FontWeight="Bold" FontSize="32" Text="Insira seus dados para calcular seu IMC!"/>
         </StackPanel>
 
+        <WrapPanel Margin="246,0,246,240" Grid.Row="3">
+            <StackPanel>
+                <TextBlock Text="Peso(Kg)" FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="121"/>
+                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Altura(cm)" FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="148"/>
+                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Idade" FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="74"/>
+                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="829">
+                <TextBlock Text="Sexo" FontFamily="Poppins" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" Height="100" Width="326">
+                    <Button Width="139" Height="48" Margin="15"/>
+                    <Button Width="139" Height="48"/>
+                </StackPanel>
+            </StackPanel>
+
+        </WrapPanel>
     </Grid>
 </Window>
