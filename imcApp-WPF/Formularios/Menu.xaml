@@ -14,8 +14,8 @@
         </Grid.RowDefinitions>
 
         <StackPanel Margin="0,-93,0,326" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Image Source="C:\Users\corto\Documents\AppWpf\vloax\imcApp-WPF\imcApp-WPF\img\V__1_-removebg-preview 1.png" Margin="475,52,475,0"/>
-        <Image Source="C:\Users\corto\Documents\AppWpf\vloax\imcApp-WPF\imcApp-WPF\img\png-removebg-preview__1__2__2_-removebg-preview.png" Margin="-105,211,635,0" Grid.RowSpan="2"></Image>
+        <Image Source="pack://application:,,,/imcApp-WPF;component/img/V__1_-removebg-preview 1.png" Margin="475,52,475,0"/>
+        <Image Source="pack://application:,,,/imcApp-WPF;component/img/png-removebg-preview__1__2__2_-removebg-preview.png" Margin="-105,211,635,0" Grid.RowSpan="2"></Image>
         
         <StackPanel>
             

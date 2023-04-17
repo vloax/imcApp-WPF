@@ -23,7 +23,19 @@ namespace imcApp_WPF
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
 
+        private void btnCalcular_Click(object sender, RoutedEventArgs e)
+        {
+            var userAge = Convert.ToInt16(txtIdade.Text);
+            var userHeight = Convert.ToInt32(txtAltura.Text);
+            var userWeight = Convert.ToInt32(txtPeso.Text);
+
+            var imcCalc = userWeight / (userHeight * userWeight);
+        
+             
+        }
     }
 }

@@ -31,7 +31,7 @@
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3">
             <StackPanel>
                 <TextBlock Text="Peso(Kg)" FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="121"/>
-                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px" FontFamily="Poppins" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5,5,5,5">
+                <TextBox x:Name="txtPeso" Background="#D9D9D9" Width="257" Height="44" Margin="9px" FontFamily="Poppins" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5,5,5,5">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="20"/>
@@ -42,7 +42,7 @@
 
             <StackPanel>
                 <TextBlock Text="Altura(cm)" FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="148"/>
-                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px" FontFamily="Poppins" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5,5,5,5">
+                <TextBox x:Name="txtAltura" Background="#D9D9D9" Width="257" Height="44" Margin="9px" FontFamily="Poppins" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5,5,5,5">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="20"/>
@@ -53,7 +53,7 @@
 
             <StackPanel>
                 <TextBlock Text="Idade" FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="74"/>
-                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px" FontFamily="Poppins" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5,5,5,5">
+                <TextBox x:Name="txtIdade" Background="#D9D9D9" Width="257" Height="44" Margin="9px" FontFamily="Poppins" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5,5,5,5">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="20"/>
@@ -67,7 +67,7 @@
             <StackPanel >
                 <TextBlock Text="Sexo" FontFamily="Poppins" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"/>
                 <StackPanel Orientation="Horizontal" Height="100" Width="326">
-                    <Button Content="Masculino" FontWeight="Bold" FontSize="24" FontFamily="Poppins" Width="139" Height="48" Margin="15px">
+                    <Button x:Name="btnMasculino" Content="Masculino" FontWeight="Bold" FontSize="24" FontFamily="Poppins" Width="139" Height="48" Margin="15px">
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
                                 <Setter Property="CornerRadius" Value="20"/>
@@ -75,7 +75,7 @@
                         </Button.Resources>
                     </Button>
 
-                    <Button Content="Feminino" FontWeight="Bold" FontSize="24" FontFamily="Poppins" Width="139" Height="48">
+                    <Button x:Name="btnFeminino" Content="Feminino" FontWeight="Bold" FontSize="24" FontFamily="Poppins" Width="139" Height="48">
 
                         <Button.Resources>
                             <Style TargetType="{x:Type Border}">
@@ -89,7 +89,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Button Margin="80" Width="266" Height="53" Background="#6BBE7D" Content="CALCULAR" FontWeight="bold" FontFamily="Poppins" FontSize="32" Foreground="White">
+            <Button x:Name="btnCalcular" Margin="80" Width="266" Height="53" Background="#6BBE7D" Content="CALCULAR" FontWeight="bold" FontFamily="Poppins" FontSize="32" Foreground="White" Click="btnCalcular_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="23"/>
