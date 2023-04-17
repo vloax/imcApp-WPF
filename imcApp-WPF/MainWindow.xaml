@@ -5,30 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:imcApp_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="740" Width="1320" WindowStyle="None">
+        Title="MainWindow" Height="740" Width="1320">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition Height="46"/>
             <RowDefinition Height="110"/>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="120"/>
             <RowDefinition Height="*"/>
+
         </Grid.RowDefinitions>
 
 
         <Border Grid.Row="0" Background="#BE0F0F" />
-        <TextBlock Grid.Row="0" FontFamily="Poppins" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="White" Text="Camila Ortolane e Vitor Melo" />
+        <TextBlock FontFamily="Poppins" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Foreground="White" Text="Camila Ortolane e Vitor Melo" />
 
         <Border Grid.Row="1" Background="#573939"/>
         <TextBlock Grid.Row="1" FontFamily="Poppins" Text="Calculadora de IMC" HorizontalAlignment="Center" VerticalAlignment="Center"  FontWeight="Bold" FontSize="32" Foreground="White" />
 
-        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30px" >
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <TextBlock FontFamily="Poppins" FontWeight="Bold" FontSize="32" Text="Insira seus dados para calcular seu IMC!"/>
         </StackPanel>
 
-        <WrapPanel Margin="246,0,246,240" Grid.Row="3">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3">
             <StackPanel>
                 <TextBlock Text="Peso(Kg)" FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="121"/>
-                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px">
+                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px" FontFamily="Poppins" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5,5,5,5">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="20"/>
@@ -39,7 +42,7 @@
 
             <StackPanel>
                 <TextBlock Text="Altura(cm)" FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="148"/>
-                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px">
+                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px" FontFamily="Poppins" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5,5,5,5">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="20"/>
@@ -50,7 +53,7 @@
 
             <StackPanel>
                 <TextBlock Text="Idade" FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="74"/>
-                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px">
+                <TextBox Background="#D9D9D9" Width="257" Height="44" Margin="9px" FontFamily="Poppins" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5,5,5,5">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="20"/>
@@ -58,15 +61,41 @@
                     </TextBox.Resources>
                 </TextBox>
             </StackPanel>
+        </StackPanel>
 
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center" Width="829">
+        <StackPanel Grid.Row="4" Orientation="Vertical" VerticalAlignment="Center"  HorizontalAlignment="Center">
+            <StackPanel >
                 <TextBlock Text="Sexo" FontFamily="Poppins" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center"/>
                 <StackPanel Orientation="Horizontal" Height="100" Width="326">
-                    <Button Width="139" Height="48" Margin="15"/>
-                    <Button Width="139" Height="48"/>
+                    <Button Content="Masculino" FontWeight="Bold" FontSize="24" FontFamily="Poppins" Width="139" Height="48" Margin="15px">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="20"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
+                    <Button Content="Feminino" FontWeight="Bold" FontSize="24" FontFamily="Poppins" Width="139" Height="48">
+
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="23"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
                 </StackPanel>
             </StackPanel>
+        </StackPanel>
 
-        </WrapPanel>
+        <StackPanel Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button Margin="80" Width="266" Height="53" Background="#6BBE7D" Content="CALCULAR" FontWeight="bold" FontFamily="Poppins" FontSize="32" Foreground="White">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="23"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
