@@ -43,7 +43,7 @@
         </TextBox>
 
         <StackPanel Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Button x:Name="btnEntrar" Width="266" Height="53" Background="#6BBE7D" Content="ENTRAR" FontWeight="bold" FontFamily="Poppins" FontSize="32" Foreground="White" Click="btnEntrar_Click" Margin="0,60,0,0">
+            <Button x:Name="btnEntrar" Width="266" Height="53" Background="#6BBE7D" Content="ENTRAR" FontWeight="bold" FontFamily="Poppins" FontSize="32" Foreground="White" Margin="0,60,0,0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="23"/>
