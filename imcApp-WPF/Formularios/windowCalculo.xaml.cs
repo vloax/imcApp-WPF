@@ -51,11 +51,15 @@ namespace imcApp_WPF.Formularios
                 txtResultado2.Text = "Obesidade";
 
             }
-             if (userResult >= 40)
+            if (userResult >= 40)
             {
                 txtResultado2.Text = "Obesidade Grave";
 
             }
+
+            txtAltura.Clear();
+            txtPeso.Clear();
+            txtIdade.Clear();
         }
     }
 }
