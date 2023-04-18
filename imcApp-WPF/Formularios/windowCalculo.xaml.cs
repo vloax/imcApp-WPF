@@ -26,40 +26,48 @@ namespace imcApp_WPF.Formularios
 
         private void btnCalcular_Click(object sender, RoutedEventArgs e)
         {
-            var alturaUsuario = Convert.ToDouble(txtAltura.Text);
-            var pesoUsuario = Convert.ToDouble(txtPeso.Text);
-            double userResult = pesoUsuario / (alturaUsuario * alturaUsuario);
-
-            txtResultado.Text = $"O seu IMC é {userResult.ToString()}";
-
-            if(userResult < 18.5)
+            if (txtAltura.Text == string.Empty || txtPeso.Text == string.Empty || txtIdade.Text == string.Empty)
             {
-                txtResultado2.Text = "Magreza";
+                MessageBox.Show("Adicione as informaçções ao campo");
             }
-            else if (userResult >= 18.5 && userResult <= 24.9)
+            else
             {
-                txtResultado2.Text = "Normal";
+                var alturaUsuario = Convert.ToDouble(txtAltura.Text);
+                var pesoUsuario = Convert.ToDouble(txtPeso.Text);
+                double userResult = pesoUsuario / (alturaUsuario * alturaUsuario);
 
+                txtResultado.Text = $"O seu IMC é {userResult.ToString()}";
+
+                if (userResult < 18.5)
+                {
+                    txtResultado2.Text = "Magreza";
+                }
+                else if (userResult >= 18.5 && userResult <= 24.9)
+                {
+                    txtResultado2.Text = "Normal";
+
+                }
+                if (userResult >= 25 && userResult <= 29.9)
+                {
+                    txtResultado2.Text = "Sobrepeso";
+
+                }
+                else if (userResult >= 30 && userResult <= 39.9)
+                {
+                    txtResultado2.Text = "Obesidade";
+
+                }
+                if (userResult >= 40)
+                {
+                    txtResultado2.Text = "Obesidade Grave";
+
+                }
+
+                txtAltura.Clear();
+                txtPeso.Clear();
+                txtIdade.Clear();
             }
-            if (userResult >= 25 && userResult <= 29.9)
-            {
-                txtResultado2.Text = "Sobrepeso";
 
-            }
-            else if (userResult >= 30 && userResult <= 39.9)
-            {
-                txtResultado2.Text = "Obesidade";
-
-            }
-            if (userResult >= 40)
-            {
-                txtResultado2.Text = "Obesidade Grave";
-
-            }
-
-            txtAltura.Clear();
-            txtPeso.Clear();
-            txtIdade.Clear();
         }
     }
 }
