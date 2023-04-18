@@ -25,9 +25,5 @@ namespace imcApp_WPF.Formularios
             InitializeComponent();
         }
 
-        private void txtSenha_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }

@@ -33,33 +33,14 @@ namespace imcApp_WPF
         private void btnCalcular_Click(object sender, RoutedEventArgs e)
         {
             var userSex = "Masculino";
-            var userHeight = Convert.ToInt32(txtAltura.Text);
-            var userWeight = Convert.ToInt32(txtPeso.Text);
+            var alturaUsuario = Convert.ToDouble(txtAltura.Text);
+            var pesoUsuario = Convert.ToDouble(txtPeso.Text);
+            double userResult = pesoUsuario / (alturaUsuario *  alturaUsuario);
 
+            txtResultado.Text = $"O seu IMC é {userResult.ToString()}";
 
-            if (userHeight > 240)
-            {
-                MessageBox.Show("Altura maior do que a aceitada, digite novamente", "Erro - ALTURA!");
-                txtPeso.Focus();
-                txtPeso.Clear();
-                txtIdade.Clear();
-                txtAltura.Clear();
-            }
-
-            if (btnFeminino.IsPressed)
-            {
-                userSex = "Feminino";
-            }
-            
-            Imc imc = new Imc();
-
-            imc.Altura = userHeight;
-            imc.Sexo = userSex;
-            imc.Peso = userWeight;
-            imc.ResultadoFinal = userWeight / (userHeight * userHeight);
-
-            imcList.Add(imc);
- 
         }
+
     }
+
 }

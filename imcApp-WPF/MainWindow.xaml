@@ -42,7 +42,7 @@
             </StackPanel>
 
             <StackPanel>
-                <TextBlock Text="Altura(cm)" FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="148"/>
+                <TextBlock FontFamily="Poppins" FontSize="25" FontWeight="Bold" Width="148"><Run Text="Altura("/><Run Language="pt-br" Text="M"/><Run Text=")"/></TextBlock>
                 <TextBox x:Name="txtAltura" Background="#D9D9D9" Width="257" Height="44" Margin="9px" FontFamily="Poppins" FontWeight="Bold" FontSize="18" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="5,5,5,5">
                     <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
@@ -101,7 +101,7 @@
 
 
         <StackPanel Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <TextBlock Text="" FontFamily="Poppins" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock x:Name="txtResultado" Text="" FontFamily="Poppins" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </StackPanel>
 
     </Grid>
