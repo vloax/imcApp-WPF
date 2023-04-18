@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using imcApp_WPF.RegrasDeNegocio;
+using imcApp_WPF.Formularios;
 
 namespace imcApp_WPF
 {
@@ -22,25 +23,17 @@ namespace imcApp_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Imc> imcList = new List<Imc>();
-
         public MainWindow()
         {
             InitializeComponent();
 
         }
 
-        private void btnCalcular_Click(object sender, RoutedEventArgs e)
+        private void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
-            var userSex = "Masculino";
-            var alturaUsuario = Convert.ToDouble(txtAltura.Text);
-            var pesoUsuario = Convert.ToDouble(txtPeso.Text);
-            double userResult = pesoUsuario / (alturaUsuario *  alturaUsuario);
-
-            txtResultado.Text = $"O seu IMC é {userResult.ToString()}";
-
+            var form = new CalcIMC();
+            form.ShowDialog();
         }
-
     }
 
 }
