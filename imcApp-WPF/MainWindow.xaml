@@ -13,6 +13,7 @@
             <RowDefinition Height="110"/>
             <RowDefinition Height="130"/>
             <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
             <RowDefinition Height="*"/>
 
         </Grid.RowDefinitions>
@@ -89,7 +90,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Top">
-            <Button x:Name="btnCalcular" Margin="80" Width="266" Height="53" Background="#6BBE7D" Content="CALCULAR" FontWeight="bold" FontFamily="Poppins" FontSize="32" Foreground="White" Click="btnCalcular_Click">
+            <Button x:Name="btnCalcular" Width="266" Height="53" Background="#6BBE7D" Content="CALCULAR" FontWeight="bold" FontFamily="Poppins" FontSize="32" Foreground="White" Click="btnCalcular_Click" Margin="0,15,0,0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="23"/>
@@ -97,5 +98,11 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
+
+
+        <StackPanel Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Sexo" FontFamily="Poppins" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        </StackPanel>
+
     </Grid>
 </Window>
