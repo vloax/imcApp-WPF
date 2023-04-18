@@ -15,7 +15,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using imcApp_WPF.RegrasDeNegocio;
 using imcApp_WPF.Formularios;
-
 namespace imcApp_WPF
 {
     /// <summary>
@@ -31,8 +30,8 @@ namespace imcApp_WPF
 
         private void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
-            var form = new CalcIMC();
-            form.ShowDialog();
+            CalcIMC form = new CalcIMC();
+            form.Show();
         }
     }
 
