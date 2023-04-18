@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using imcApp_WPF.RegrasDeNegocio;
 
 namespace imcApp_WPF
 {
@@ -21,17 +22,20 @@ namespace imcApp_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Imc> imcList = new List<Imc>();
+
         public MainWindow()
         {
             InitializeComponent();
-
 
         }
 
         private void btnCalcular_Click(object sender, RoutedEventArgs e)
         {
-            var userAge = Convert.ToInt16(txtIdade.Text);
+            var userSex = "Masculino";
             var userHeight = Convert.ToInt32(txtAltura.Text);
+            var userWeight = Convert.ToInt32(txtPeso.Text);
+
 
             if (userHeight > 240)
             {
@@ -41,18 +45,20 @@ namespace imcApp_WPF
                 txtIdade.Clear();
                 txtAltura.Clear();
             }
-            
-            var userWeight = Convert.ToInt32(txtPeso.Text);
-
-            var imcCalc = userWeight / (userHeight * userWeight);
-
-            var userGender = "Masculino";
 
             if (btnFeminino.IsPressed)
             {
-
+                userSex = "Feminino";
             }
-             
+            
+            Imc imc = new Imc();
+
+            imc.Altura = userHeight;
+            imc.Sexo = userSex;
+            imc.Peso = userWeight;
+            imc.ResultadoFinal = userWeight / (userHeight * userHeight);
+
+            imcList.Add(imc);
  
         }
     }
