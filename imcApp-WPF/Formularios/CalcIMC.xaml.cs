@@ -20,7 +20,6 @@ namespace imcApp_WPF.Formularios
     /// </summary>
     public partial class CalcIMC : Page
     {
-        List<Imc> imcList = new List<Imc>();
 
         public CalcIMC()
         {
