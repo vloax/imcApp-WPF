@@ -1,6 +1,6 @@
-﻿using System;
+﻿using imcApp_WPF.Formularios;
+using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,28 +11,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using imcApp_WPF.RegrasDeNegocio;
-using imcApp_WPF.Formularios;
+
 namespace imcApp_WPF
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Lógica interna para principalWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class principalWindow : Window
     {
-        public MainWindow()
+        public principalWindow()
         {
             InitializeComponent();
-
         }
 
         private void btnEntrar_Click(object sender, RoutedEventArgs e)
         {
-            CalcIMC form = new CalcIMC();
-            form.Show();
+            var newWindow = new windowCalculo();
+            newWindow.Show();
         }
     }
-
 }

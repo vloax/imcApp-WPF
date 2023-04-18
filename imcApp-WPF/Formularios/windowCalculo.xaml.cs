@@ -10,31 +10,52 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using imcApp_WPF.RegrasDeNegocio;
 
 namespace imcApp_WPF.Formularios
 {
     /// <summary>
-    /// Interação lógica para CalcIMC.xam
+    /// Lógica interna para windowCalculo.xaml
     /// </summary>
-    public partial class CalcIMC : Page
+    public partial class windowCalculo : Window
     {
-
-        public CalcIMC()
+        public windowCalculo()
         {
             InitializeComponent();
         }
+
         private void btnCalcular_Click(object sender, RoutedEventArgs e)
         {
-            var userSex = "Masculino";
             var alturaUsuario = Convert.ToDouble(txtAltura.Text);
             var pesoUsuario = Convert.ToDouble(txtPeso.Text);
             double userResult = pesoUsuario / (alturaUsuario * alturaUsuario);
 
             txtResultado.Text = $"O seu IMC é {userResult.ToString()}";
 
+            if(userResult < 18.5)
+            {
+                txtResultado2.Text = "Magreza";
+            }
+            else if (userResult >= 18.5 && userResult <= 24.9)
+            {
+                txtResultado2.Text = "Normal";
+
+            }
+            if (userResult >= 25 && userResult <= 29.9)
+            {
+                txtResultado2.Text = "Sobrepeso";
+
+            }
+            else if (userResult >= 30 && userResult <= 39.9)
+            {
+                txtResultado2.Text = "Obesidade";
+
+            }
+             if (userResult >= 40)
+            {
+                txtResultado2.Text = "Obesidade Grave";
+
+            }
         }
     }
 }

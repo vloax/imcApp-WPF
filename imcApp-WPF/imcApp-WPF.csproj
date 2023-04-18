@@ -9,8 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="logoImc.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="assets\" />
-    <Folder Include="img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="logoImc.png" />
   </ItemGroup>
 
 </Project>
