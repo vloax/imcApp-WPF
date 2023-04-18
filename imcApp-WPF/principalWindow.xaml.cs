@@ -29,6 +29,7 @@ namespace imcApp_WPF
         {
             var newWindow = new windowCalculo();
             newWindow.Show();
+            Close();
         }
     }
 }
